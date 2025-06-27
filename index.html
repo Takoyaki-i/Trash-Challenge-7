@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.tailwindcss.com/" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.2/flowbite.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="fixed top-0 left-0 w-full bg-white border-gray-200 dark:bg-[#324d42] z-50 shadow-lg">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-6 py-2">
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="logo_fismo_tanpa_teks-removebg-preview.png" class="h-12 w-16" alt="Fismo Logo" />
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Fismo Club</span>
+            </a>
+            <button data-collapse-toggle="navbar-default" type="button"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul
+                    class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-[#324d42]">
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-white md:p-0"
+                            aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about"
+                            class="block py-2 px-3 text-gray-900 rounded-sm md:border-0  md:p-0 dark:text-white">About</a>
+                    </li>
+                    <li class="relative">
+                        <button id="dropdownButton" data-dropdown-toggle="dropdownDocs"
+                            class="block py-2 px-3 text-gray-900 rounded-sm md:border-0 md:p-0 dark:text-white focus:outline-none">
+                            Documentation
+                        </button>
+                        <div id="dropdownDocs"
+                            class="z-10 hidden absolute divide-y divide-gray-100 rounded-lg shadow w-44 bg-[#324d42]">
+                            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200">
+                                <li>
+                                    <a href="volunteer.html" class="block px-4 py-2 ">Volunteer</a>
+                                </li>
+                                <li>
+                                    <a href="committee.html" class="block px-4 py-2 ">Committee</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <div class="w-full h-[100vh] md:h-[100vh] relative flex items-center">
+        <img src="abc.png" alt="" class="w-full h-full object-cover brightness-50" />
+        <div class="absolute inset-0 flex items-center justify-end px-4 md:px-32 text-right">
+            <div class="flex flex-col items-end">
+                <h1 class="text-white text-3xl md:text-5xl font-bold mb-2">Trash Challenge #7</h1>
+                <p class="text-white text-lg md:text-xl">Restore the Blue Release the New</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- About Section -->
+    <div class="w-full min-h-[60vh] md:min-h-[80vh] p-4 md:p-8 flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12"
+        id="about">
+        <img src="pohon kelapa.png" class="w-full md:w-1/2 max-w-md mb-4 md:mb-0 rounded-lg " alt="Pohon Kelapa">
+        <p class="w-full md:w-1/2 text-base md:text-xl text-gray text-justify">
+            Trash Challenge #7 salah satu program kerja yang diajukan oleh Divisi Lingkungan Hidup FISIPOL Society
+            Empowerment Club Universitas Muhammadiyah Yogyakarta. Di dalam program ini kami mengajak anggota FISMO Club
+            dan masyarakat Fakultas Ilmu Sosial dan Politik Universitas Muhammadiyah Yogyakarta untuk ikut andil dalam
+            melakukan aksi nyata dalam upaya pelestarian lingkungan hidup.
+        </p>
+    </div>
+
+    <!-- Documentation Volunteer -->
+    <div class="w-full p-4 md:p-8 flex flex-col items-center">
+        <h1 class="text-3xl font-bold text-gray mb-4">Documentation</h1>
+        <p class="text-xl mb-6 text-gray">Volunteer</p>
+        <div
+            class="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full max-w-6xl">
+            <div class="relative group w-full h-40 overflow-hidden rounded-lg shadow-lg bg-gray">
+                <img id="gambar-penyu-1" src="gambar penyu.jpg" alt="Item Image"
+                    class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 group-hover:brightness-90">
+                <button onclick="downloadGambar('gambar-penyu-1')"
+                    class="absolute top-2 right-2 bg-white/90 text-sm text-gray-700 px-3 py-1 rounded shadow-md opacity-0 group-hover:opacity-100 transition duration-300 border border-gray-200">
+                    Download
+                </button>
+            </div>
+            <div class="relative group w-full h-40 overflow-hidden rounded-lg shadow-lg bg-gray">
+                <img id="gambar-penyu-2" src="gambar penyu.jpg" alt="Item Image"
+                    class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 group-hover:brightness-90">
+                <button onclick="downloadGambar('gambar-penyu-2')"
+                    class="absolute top-2 right-2 bg-white/90 text-sm text-gray-700 px-3 py-1 rounded shadow-md opacity-0 group-hover:opacity-100 transition duration-300 border border-gray-200">
+                    Download
+                </button>
+            </div>
+            <div class="relative group w-full h-40 overflow-hidden rounded-lg shadow-lg bg-gray">
+                <img id="gambar-penyu-3" src="gambar penyu.jpg" alt="Item Image"
+                    class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 group-hover:brightness-90">
+                <button onclick="downloadGambar('gambar-penyu-3')"
+                    class="absolute top-2 right-2 bg-white/90 text-sm text-gray-700 px-3 py-1 rounded shadow-md opacity-0 group-hover:opacity-100 transition duration-300 border border-gray-200">
+                    Download
+                </button>
+            </div>
+            <div class="relative group w-full h-40 overflow-hidden rounded-lg shadow-lg bg-gray">
+                <img id="gambar-penyu-4" src="gambar penyu.jpg" alt="Item Image"
+                    class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 group-hover:brightness-90">
+                <button onclick="downloadGambar('gambar-penyu-4')"
+                    class="absolute top-2 right-2 bg-white/90 text-sm text-gray-700 px-3 py-1 rounded shadow-md opacity-0 group-hover:opacity-100 transition duration-300 border border-gray-200">
+                    Download
+                </button>
+            </div>
+        </div>
+        <div class="w-full max-w-6xl flex justify-center mt-4">
+            <a href="volunteer.html" class="w-full">
+                <button type="button"
+                    class="w-full py-2.5 px-6 text-lg font-semibold rounded-full border border-gray-200 bg-gray text-gray-900 hover:bg-gray-100 hover:text-blue-200 focus:outline-none focus:ring-2 focus:ring-gray-200 transition dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-600 dark:hover:text-gray dark:hover:bg-gray-700">
+                    See All
+                </button>
+            </a>
+        </div>
+    </div>
+
+    <!-- Documentation Committee -->
+    <div class="w-full p-4 md:p-8 flex flex-col items-center" id="comitee">
+        <p class="text-xl mb-6 text-gray">Comittee</p>
+        <div
+            class="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full max-w-6xl">
+            <div class="relative group w-full h-40 overflow-hidden rounded-lg shadow-lg bg-gray">
+                <img id="gambar-penyu-1" src="gambar penyu.jpg" alt="Item Image"
+                    class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 group-hover:brightness-90">
+                <button onclick="downloadGambar('gambar-penyu-1')"
+                    class="absolute top-2 right-2 bg-white/90 text-sm text-gray-700 px-3 py-1 rounded shadow-md opacity-0 group-hover:opacity-100 transition duration-300 border border-gray-200">
+                    Download
+                </button>
+            </div>
+            <div class="relative group w-full h-40 overflow-hidden rounded-lg shadow-lg bg-gray">
+                <img id="gambar-penyu-2" src="gambar penyu.jpg" alt="Item Image"
+                    class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 group-hover:brightness-90">
+                <button onclick="downloadGambar('gambar-penyu-2')"
+                    class="absolute top-2 right-2 bg-white/90 text-sm text-gray-700 px-3 py-1 rounded shadow-md opacity-0 group-hover:opacity-100 transition duration-300 border border-gray-200">
+                    Download
+                </button>
+            </div>
+            <div class="relative group w-full h-40 overflow-hidden rounded-lg shadow-lg bg-gray">
+                <img id="gambar-penyu-3" src="gambar penyu.jpg" alt="Item Image"
+                    class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 group-hover:brightness-90">
+                <button onclick="downloadGambar('gambar-penyu-3')"
+                    class="absolute top-2 right-2 bg-white/90 text-sm text-gray-700 px-3 py-1 rounded shadow-md opacity-0 group-hover:opacity-100 transition duration-300 border border-gray-200">
+                    Download
+                </button>
+            </div>
+            <div class="relative group w-full h-40 overflow-hidden rounded-lg shadow-lg bg-gray">
+                <img id="gambar-penyu-4" src="gambar penyu.jpg" alt="Item Image"
+                    class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 group-hover:brightness-90">
+                <button onclick="downloadGambar('gambar-penyu-4')"
+                    class="absolute top-2 right-2 bg-white/90 text-sm text-gray-700 px-3 py-1 rounded shadow-md opacity-0 group-hover:opacity-100 transition duration-300 border border-gray-200">
+                    Download
+                </button>
+            </div>
+        </div>
+        <div class="w-full max-w-6xl flex justify-center mt-4">
+            <a href="committee.html" class="w-full">
+                <button type="button"
+                    class="w-full py-2.5 px-6 text-lg font-semibold rounded-full border border-gray-200 bg-gray text-gray-900 hover:bg-gray-100 hover:text-blue-200 focus:outline-none focus:ring-2 focus:ring-gray-200 transition dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-600 dark:hover:text-gray dark:hover:bg-gray-700">
+                    See All
+                </button>
+            </a>
+        </div>
+    </div>
+    <footer class="w-full px-4 py-10 dark:bg-[#324d42] bg-[#1a1a1a] text-white">
+      <div class="max-w-6xl mx-auto">
+        <h3 class="text-xl font-bold mb-4 border-b border-white">
+          Our Social Media:
+        </h3>
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 pb-6"        >
+          <div class="text-center md:text-left">
+            <div class="flex justify-center md:justify-start gap-4">
+              <a
+                href="https://www.instagram.com/fismoclub?igsh=OWttNzl3aGRoZm94"
+                class="w-10 h-10 flex items-center justify-center rounded-full bg-pink-100 hover:bg-pink-200 text-pink-600 transition"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://youtube.com/@fismoclub8509?si=0tgViblJHCAXDr0N"
+                class="w-10 h-10 flex items-center justify-center rounded-full bg-red-100 hover:bg-red-200 text-red-600 transition"
+              >
+                <i class="fab fa-youtube"></i>
+              </a>
+              <a
+                href="https://www.tiktok.com/@fismoclubumy?_t=ZS-8xEY4nuYpGB&_r=1"
+                class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 text-black transition"
+              >
+                <i class="fab fa-tiktok"></i>
+              </a>
+              <a
+                href="https://www.kompasiana.com/fismo301015"
+                class="w-10 h-10 flex items-center justify-center rounded-full bg-indigo-100 hover:bg-indigo-300 text-indigo-900 transition"
+              >
+                <i class="fa-solid fa-globe"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Copyright -->
+          <div class="text-sm text-center md:text-right">
+            &copy; 2025 Fisipol Society Empowerment Club UMY. All rights
+            reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+        // Simple animation for social icons on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            const socialIcons = document.querySelectorAll('.social-icon');
+
+            socialIcons.forEach((icon, index) => {
+                setTimeout(() => {
+                    icon.style.transform = 'translateY(-5px)';
+                    setTimeout(() => {
+                        icon.style.transform = 'translateY(0)';
+                    }, 300);
+                }, index * 100);
+            });
+
+            // Sponsor logo animation on hover
+            const sponsorLogos = document.querySelectorAll('.sponsor-logo');
+            sponsorLogos.forEach(logo => {
+                logo.addEventListener('mouseenter', () => {
+                    logo.style.transform = 'scale(1.05)';
+                });
+                logo.addEventListener('mouseleave', () => {
+                    logo.style.transform = 'scale(1)';
+                });
+            });
+        });
+    </script>
+
+    <script>
+        function downloadGambar(imgId) {
+            const img = document.getElementById(imgId);
+            const url = img.src;
+            const filename = url.split('/').pop();
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.2/flowbite.min.js"></script>
+</body>
+
+</html>
